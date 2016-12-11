@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    <h2>Импорт CSV</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+    	<input type="file" name="zip">
+    	<input type="submit" value="Upload">
+    </form>
+    {% block content %}
+    	{% for error in errors %}
+    	<p>{{ error }}</p>
+    	{% endfor %}
+    {% endblock %}
+</body>
+</html>

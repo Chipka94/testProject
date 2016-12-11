@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    <h2>Издательства</h2>
+    <table cellspacing="5">
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+        </tr>
+        {% for publisher in publishers %}
+        <tr>
+            <td>{{ publisher.id }}</td>
+            <td><a href="/publishers/{{ publisher.id }}">{{ publisher.name }}</a></td>
+        </tr>   
+        {% endfor %}
+    </table>
+    <div>
+        <a href="/books">Книги | </a>
+        <a href="/authors">Авторы | </a>
+        <a href="/publishers">Издательства</a>
+    </div>
+</body>
+</html>
