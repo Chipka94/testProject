@@ -4,5 +4,6 @@ return array(
     "host" => "localhost",
     "user" => "",
     "dbname" => "",
-    "password" => ""
+    "password" => "",
+    "charset" => "utf8"
 );

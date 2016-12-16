@@ -15,8 +15,9 @@ class DBSource {
         $user = $settings["user"];
         $dbname = $settings["dbname"];
         $password = $settings["password"];
+        $charset = $settings["charset"];
 
-        $dbh = "mysql:host=$host;dbname=$dbname";
+        $dbh = "mysql:host=$host;dbname=$dbname;charset=$charset";
         return new PDO($dbh, $user, $password);
     }
 }
