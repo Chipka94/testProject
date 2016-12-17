@@ -2,7 +2,7 @@
 
 define("ROOT", dirname(__FILE__));
 
-# новый комментарий
+// путь к роутеру; автозагрузчику библиотек Composer'а
 require_once ROOT . '/components/router/Router.php';
 require_once ROOT . '/vendor/autoload.php';
 
