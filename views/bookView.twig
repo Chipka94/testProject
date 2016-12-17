@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Main</title>
-</head>
-<body>
+{% extends 'base.twig' %}
+
+{% block title %} {{ book.name }} {% endblock %}
+
+{% block content %}
     <p>ID: {{ book.id }}</p>
     <p>Название: {{ book.name }}</p>
     <p>Автор: <a href="/authors/{{ book.authorID }}">{{ book.author }}</a></p>
     <p>Издательство: <a href="/publishers/{{ book.publisherID }}">{{ book.publisher }}</a></p>
     <p>ISBN: {{ book.isbn }}</p>
     <p>Страниц: {{ book.pages }}</p>
-    <div>
-        <a href="/books">Книги | </a>
-        <a href="/authors">Авторы | </a>
-        <a href="/publishers">Издательства</a>
-    </div>
-</body>
-</html>
+{% endblock %}

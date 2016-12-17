@@ -1,0 +1,19 @@
+{% extends 'base.twig' %}
+
+{% block title %} Издательства {% endblock %}
+
+{% block content %}
+    <h2>Издательства</h2>
+    <table cellspacing="5">
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+        </tr>
+        {% for publisher in publishers %}
+            <tr>
+                <td>{{ publisher.id }}</td>
+                <td><a href="/publishers/{{ publisher.id }}">{{ publisher.name }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

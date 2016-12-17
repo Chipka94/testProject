@@ -1,0 +1,22 @@
+{% extends 'base.twig' %}
+
+{% block title %} Книги {% endblock %}
+{% block content %}
+	<h2>Книги</h2>
+	<table cellspacing="5">
+		<tr>
+			<th>ID</th>
+			<th>Название</th>
+			<th>Издательство</th>
+			<th>Автор</th>
+		</tr>
+        {% for book in books %}
+			<tr>
+				<td>{{ book.id }}</td>
+				<td><a href="/books/{{ book.id }}">{{ book.name }}</a></td>
+				<td><a href="/publishers/{{ book.publisherID }}">{{ book.publisher }}</a></td>
+				<td><a href="/authors/{{ book.authorID }}">{{ book.author }}</a></td>
+			</tr>
+        {% endfor %}
+	</table>
+{% endblock %}

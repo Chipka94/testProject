@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    {% block content %} {% endblock %}
+    {% block footer %}
+        <div>
+            <a href="/books">Книги | </a>
+            <a href="/authors">Авторы | </a>
+            <a href="/publishers">Издательства</a>
+        </div>
+    {% endblock %}
+</body>
+</html>

@@ -3,27 +3,26 @@
 include_once ROOT . "/models/AuthorModel.php";
 include_once ROOT . "/models/PublisherModel.php";
 include_once ROOT . "/models/BookModel.php";
+include_once ROOT . "/components/twig/TwigInit.php";
 
 class PublisherController {
 
     public function actionIndex() {
-        
-        $loader = new Twig_Loader_Filesystem(ROOT . "/views/publishers");
-        $twig = new Twig_Environment($loader);
+
+        $twig = TwigInit::init();
 
         $publisherModel = new PublisherModel();
 
         $publisherData = $publisherModel->getPublishers();
 
-        echo $twig->render('index.html', array("publishers" => $publisherData));
+        echo $twig->render('publisherIndex.twig', array("publishers" => $publisherData));
 
         return true;
     }
 
     public function actionView($id)
     {
-        $loader = new Twig_Loader_Filesystem(ROOT . "/views/publishers");
-        $twig = new Twig_Environment($loader);
+        $twig = TwigInit::init();
 
         $authorModel = new AuthorModel();
         $publisherModel = new PublisherModel();
@@ -50,7 +49,7 @@ class PublisherController {
 
         $result["publisher"] = $publisherName["name"];
 
-        echo $twig->render('publisher.html', array("books" => $result));
+        echo $twig->render('publisherView.twig', array("books" => $result));
         
         return true;
     }

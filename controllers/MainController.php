@@ -4,6 +4,7 @@ use League\Csv\Reader;
 include_once ROOT . "/models/AuthorModel.php";
 include_once ROOT . "/models/PublisherModel.php";
 include_once ROOT . "/models/BookModel.php";
+include_once ROOT . "/components/twig/TwigInit.php";
 
 /**
  * Class MainController
@@ -12,9 +13,8 @@ include_once ROOT . "/models/BookModel.php";
 class MainController {
 
     public function actionIndex() {
-        
-        $loader = new Twig_Loader_Filesystem(ROOT . "/views/main");
-        $twig = new Twig_Environment($loader);
+
+        $twig = TwigInit::init();
 
         $errors = array();
 
@@ -83,7 +83,7 @@ class MainController {
         	
         }
 
-        echo $twig->render('index.html', array("errors" => $errors));
+        echo $twig->render('index.twig', array("errors" => $errors));
 
         return true;
     }

@@ -43,6 +43,15 @@ Temporary Items
 .apdisk
 
 # External libraries
-/vendor/
+vendor/
 
+# ==================
 .idea/
+
+# ==================
+composer.phar
+
+# ==================
+csv/authors.csv
+csv/books.csv
+csv/publishers.csv
