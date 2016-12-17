@@ -35,7 +35,8 @@ class PublisherController {
         foreach ($bookData as $row) {
         	$authorID = $row["author_id"];
             $authorName = $authorModel->getName($authorID);
-        	$publisherName = $publisherModel->getName($id); 
+        	$publisherName = $publisherModel->getName($id);
+        	$publisherLink = $publisherModel->getLink($id);
 
         	$res = array(
             	"id" => $row["id"],
@@ -48,6 +49,7 @@ class PublisherController {
         }
 
         $result["publisher"] = $publisherName["name"];
+        $result["link"] = $publisherLink["link"];
 
         echo $twig->render('publisherView.twig', array("books" => $result));
         

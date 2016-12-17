@@ -22,3 +22,9 @@
 * В файле dbSettings.php(../config/dbSettings.php) указать параметры подключения к БД
 * Необходимо запустить сервер и перейти по адресу "testproject.com", загрузить zip архив
 * Готово к использованию!
+
+# UML диаграммы
+* Deployment - https://drive.google.com/open?id=0B-qtTfwR2o6ANU5ma1FNNmRLd2c
+* Database - https://drive.google.com/open?id=0B-qtTfwR2o6AN2R2QktxYkxRdHc
+* Use Case - https://drive.google.com/open?id=0B-qtTfwR2o6AV2ZKT0V3VjdaLUU
+* Class diagram - https://drive.google.com/open?id=0B-qtTfwR2o6ASWVhblJSNUxnbkk

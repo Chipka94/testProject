@@ -2,12 +2,12 @@
 
 include_once ROOT . "/components/source/DBSource.php";
 
-class AuthorModel extends DBSource
+class AuthorModel
 {
     private $connection;
 
     public function __construct() {
-        $this->connection = self::getConnection();
+        $this->connection = DBSource::getConnection();
     }
 
     public function checkID($id)

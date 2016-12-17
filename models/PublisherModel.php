@@ -2,12 +2,12 @@
 
 include_once ROOT . "/components/source/DBSource.php";
 
-class PublisherModel extends DBSource
+class PublisherModel
 {
     private $connection;
 
     public function __construct() {
-        $this->connection = self::getConnection();
+        $this->connection = DBSource::getConnection();
     }
 
     public function checkID($id)
@@ -33,6 +33,17 @@ class PublisherModel extends DBSource
     {
         $sth = $this->connection->prepare(
             "SELECT name FROM publisher 
+            WHERE id= :id"
+        );
+        $sth->execute(array("id" => $id));
+
+        return $sth->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getLink($id)
+    {
+        $sth = $this->connection->prepare(
+            "SELECT link FROM publisher 
             WHERE id= :id"
         );
         $sth->execute(array("id" => $id));

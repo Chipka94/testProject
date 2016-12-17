@@ -4,11 +4,13 @@
 
 {% block content %}
 	<p><strong>{{ books.publisher }}</strong></p>
+	<p>Адрес: <a href="{{ books.link }}">{{ books.link }}</a></p>
 	<table cellspacing="5">
 		<tr>
 			<th>ID</th>
 			<th>Книга</th>
 			<th>Автор</th>
+			<th>Ссылка</th>
 		</tr>
         {% for book in books %}
 			<tr>

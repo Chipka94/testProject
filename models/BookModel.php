@@ -2,13 +2,13 @@
 
 include_once ROOT . "/components/source/DBSource.php";
 
-class BookModel extends DBSource
+class BookModel
 {
     // подключение к БД
     private $connection;
 
     public function __construct() {
-        $this->connection = self::getConnection();
+        $this->connection = DBSource::getConnection();
     }
 
     public function checkID($id)
