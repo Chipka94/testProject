@@ -2,8 +2,8 @@
 
 return array(
     "host" => "localhost",
-    "user" => "root",
-    "dbname" => "test_project",
-    "password" => "chipka22111994",
+    "user" => "",
+    "dbname" => "",
+    "password" => "",
     "charset" => "utf8"
 );
