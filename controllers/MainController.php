@@ -1,10 +1,6 @@
 <?php
 
 use League\Csv\Reader;
-include_once ROOT . "/models/AuthorModel.php";
-include_once ROOT . "/models/PublisherModel.php";
-include_once ROOT . "/models/BookModel.php";
-include_once ROOT . "/components/twig/TwigInit.php";
 
 /**
  * Class MainController

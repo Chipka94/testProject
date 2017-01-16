@@ -1,4 +1,13 @@
 {
+
+    "autoload": {
+        "classmap": [
+            "models",
+            "controllers",
+            "components"
+        ]
+    },
+
     "require": {
         "league/csv": "^8.1",
         "twig/twig": "~1.0"
